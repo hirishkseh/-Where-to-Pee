@@ -1,0 +1,1 @@
+"Where to Pee" is a quirky and humorous web application that combines fun and functionality. The app is designed to simulate the age-old dilemma of finding the optimal urinal in a washroom while ensuring maximum social distancing.
