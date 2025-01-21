@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #d8e8f3; /* Soft blue washroom theme */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Washroom Container */
+.washroom-ui {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px 20px 40px; /* Increased padding at the bottom */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid #d0d0d0;
+    position: relative;
+}
+
+/* Header and Instructions */
+.washroom-ui h1 {
+    font-size: 2rem;
+    margin: 10px 0 20px; /* Added extra margin at the bottom */
+    color: #0056b3;
+    text-shadow: 2px 2px #b3d7ff;
+}
+
+.instructions {
+    font-size: 1.1rem;
+    margin: 10px 0 30px; /* Added extra margin below instructions */
+    color: #666;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0 40px; /* Added extra bottom margin to create spacing below */
+}
+
+label {
+    font-size: 1rem;
+    color: #444;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    font-size: 1rem;
+    padding: 5px;
+    width: 80px;
+    border: 2px solid #b0b0b0;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #0056b3;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px; /* Added extra spacing to push buttons downward */
+}
+
+button:hover {
+    background: #004494;
+}
+
+/* Urinal Layout */
+.horizontal-urinals {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px; /* Increased margin to separate urinals from other elements */
+}
+
+.urinal {
+    width: 50px;
+    height: 80px;
+    background: #e0e0e0;
+    border: 2px solid #b0b0b0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.urinal.free:hover {
+    background: #8bc34a;
+    transform: scale(1.2);
+}
+
+.urinal.occupied {
+    background: #f44336;
+    pointer-events: none;
+}
+
+/* Additional Styles for Urinals */
+.urinal::after {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: #888;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -10px;
+}
+
+/* Prompts and Quotes */
+.prompt, .wise-quote {
+    font-size: 1rem;
+    margin: 25px 0; /* Increased margin to separate text more */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prompt.error {
+    background: #fce4e4;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+.prompt.success {
+    background: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #388e3c;
+}
+
+.prompt.loading {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #1565c0;
+}
+
+/* Decorative Images */
+.decor img {
+    position: absolute;
+    width: 50px;
+    top: 20px;
+}
+
+.toilet-paper {
+    left: 20px;
+    animation: wiggle 2s infinite;
+}
+
+.soap {
+    right: 20px;
+    animation: float 3s infinite;
+}
+
+/* Animations */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

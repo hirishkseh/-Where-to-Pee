@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚽 Where to Pee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="washroom-ui">
+        <h1>🚽 Where to Pee</h1>
+        <p class="instructions">"Step right in and claim your spot... if you dare."</p>
+        <form id="urinal-form">
+            <label for="num-urinals">Number of Urinals:</label>
+            <input type="number" id="num-urinals" >
+            <button type="submit">Generate Urinals</button>
+        </form>
+
+        <div id="urinals-container" class="horizontal-urinals"></div>
+        <button id="find-position" disabled>Find My Spot 🚀</button>
+        <p class="prompt"></p>
+        <p class="wise-quote"></p>
+        <div class="decor">
+            <img src="assets/toilet-paper.png" alt="Toilet Paper" class="toilet-paper">
+            <img src="assets/soap.png" alt="Soap" class="soap">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
